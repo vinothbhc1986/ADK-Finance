@@ -1,0 +1,37 @@
+The Google Agent Development Kit (ADK) is a specialized framework designed for building and managing autonomous agentic AI systems.
+It enables developers to create intelligent agents, equip them with various in-built tools (such as Google Search) or custom Python tools, and orchestrate complex multi-agent workflows.
+
+Root Agent:
+   The Root Agent acts as the mandatory entry point for your AI application, defining the primary agent that the system invokes when it starts.
+   Without assigning a specific agent as the root, the application will not execute.
+
+   In the Google Agent Development Kit (ADK), this agent serves as the central orchestrator, managing how incoming tasks are processed.
+   Depending on your configuration, it can either handle requests directly through its own instructions and tools or delegate complex sub-tasks to other subordinate agents.
+
+Building an AI agent using the Google Agent Development Kit (ADK) requires several foundational steps to set up the development environment and ensure the system functions correctly:
+
+- Initial Setup & Dependencies:
+     You must create a requirements.txt file including google-adk and python-dotenv.  It is essential to use a virtual environment to avoid dependency conflicts 
+
+- API Configuration: 
+    Obtain a Gemini API key via the Google Cloud Console and AI Studio. This key should be stored in a .env file to authenticate your requests.
+
+- Project Structure: 
+    A standard agent folder should contain an agent.py file (where the agent logic is defined) and an __init__.py file (to expose the agent to other packages).
+
+- Root Agent Definition:
+     Every application must define a Root Agent to determine the entry point for the AI system.
+
+- Tool Integration: 
+    You can equip agents with built-in tools (like Google Search) or custom tools (Python functions).
+    Note that the ADK has a specific constraint: 
+        you cannot combine a custom tool and an in-built tool within the same agent instance.
+
+
+
+
+
+
+
+
+   
